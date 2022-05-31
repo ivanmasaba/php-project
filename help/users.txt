@@ -1,7 +1,7 @@
 student account:
-username: mark
-password: 1000
+username: martha
+password: 1
 
 staff account:
-username: andy
-password: 4321
+username: mathew
+password: 2
