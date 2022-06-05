@@ -34,9 +34,37 @@
             return $stmt;
         }
 
+        /************************************** */
+        
+ // get only one students marks of a particular subject and class info from db
+                public function read_os($reg, $cname, $sub){
+                    //create query
+                    $query = 'SELECT
+                             test_score, exam_score, total_score, grade
+                             FROM students s INNER JOIN
+                             marks m ON s.reg_num = m.reg_num
+                             INNER JOIN 
+                             subjects sb ON m.subj_id = sb.id 
+                             WHERE s.reg_num = :reg
+                             AND s.class_id = (SELECT id FROM class WHERE class_name = :cname )
+                             AND  sb.subj_name = :sub_name';
+        
+                    // prepare the statement
+                    $stmt = $this->con->prepare($query);
+                    $stmt->bindParam(':reg', $reg);//1 means the 1st parameter
+                    $stmt->bindParam(':cname', $cname);//1 means the 1st parameter
+                    $stmt->bindParam(':sub_name', $sub);//1 means the 1st parameter
+                    //execute query
+                    $stmt->execute();
+                    
+                    return $stmt;
+                }// end read-all methed
+        
+        /************************************** */
+
 /************************************** */
 
-        // get all student of a particula subject and class info from db
+        // get all students marks of a particular subject and class info from db
         public function read_al($cname, $sub){
             //create query
             $query = 'SELECT

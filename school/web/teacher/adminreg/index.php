@@ -1,7 +1,7 @@
 <?php 
 	session_start();
 	if( $_SESSION['authenticated'] != 'yes' )
-	{header("location: ../login.php");}
+	{header("location: ../../login.php");}
 	// initialize the app
 	
 	include_once( $_SERVER['DOCUMENT_ROOT'].'/frontend/school/core/initialize.php');
@@ -95,7 +95,7 @@
 	 <h4>Select an activity</h4>
         <h3 style="background-image: url(../../images/frontpage1.png);" ><a href='../'>Home</a></h3>
         
-        <h3><a href="#">Add Results</a></h3>
+        <h3><a href="../adminr/">Add Results</a></h3>
         <h3 style="background-image: url(images/email_initiator.gif);" ><a href='../advres/'>View results</a></h3>
         
      <h3><a href="../adminreg/">Account info</a></h3>

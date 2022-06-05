@@ -125,7 +125,7 @@
 /************************************** */
 
          // update a students 
-         public function update($reg, $subj_id){
+         public function update($reg, $subj_id){ 
             //create query
             $query = 'UPDATE ' .$this->table.' 
             SET
@@ -139,20 +139,18 @@
    // prepare the statement
    $stmt = $this->con->prepare($query);
    // since data is coming from user, we have to clean it
-   $this->reg_num     = htmlspecialchars( strip_tags( $this->reg ) );
-   $this->subj_id     = htmlspecialchars( strip_tags( $this->subj_id ) );
-   $this->test_score  = htmlspecialchars( strip_tags( $this->test_score ) );
-   $this->exam_score  = htmlspecialchars( strip_tags( $this->exam_score ) );
-   $this->total_score = htmlspecialchars( strip_tags( $this->total_score ) );
+   $this->test  = htmlspecialchars( strip_tags( $this->test ) );
+   $this->exam  = htmlspecialchars( strip_tags( $this->exam ) );
+   $this->total = htmlspecialchars( strip_tags( $this->total ) );
    $this->grade       = htmlspecialchars( strip_tags( $this->grade ) );
 
    // bind the parameters
-   $stmt->bindParam( ':test_score', $this->test_score );
-   $stmt->bindParam( ':exam_score', $this->exam_score );
-   $stmt->bindParam( ':total_score', $this->total_score );
+   $stmt->bindParam( ':test', $this->test );
+   $stmt->bindParam( ':exam', $this->exam );
+   $stmt->bindParam( ':total', $this->total );
    $stmt->bindParam( ':grade', $this->grade );
-   $stmt->bindParam( ':reg_num', $this->reg_num );
-   $stmt->bindParam( ':id', $this->subj_id );
+   $stmt->bindParam( ':reg_num', $reg );
+   $stmt->bindParam( ':id', $subj_id );
 
             //execute query
             if( $stmt->execute() ){

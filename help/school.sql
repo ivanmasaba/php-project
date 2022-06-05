@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 31, 2022 at 08:14 PM
+-- Generation Time: Jun 05, 2022 at 06:40 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -90,21 +90,21 @@ CREATE TABLE `marks` (
 --
 
 INSERT INTO `marks` (`id`, `reg_num`, `subj_id`, `test_score`, `exam_score`, `total_score`, `grade`) VALUES
-(1, 1, 1, 0, 0, 0, 'F'),
+(1, 1, 1, 20, 21, 41, 'E'),
 (2, 1, 2, 0, 0, 0, 'F'),
 (3, 1, 3, 0, 0, 0, 'F'),
 (4, 1, 4, 0, 0, 0, 'F'),
 (5, 1, 5, 0, 0, 0, 'F'),
 (6, 1, 6, 0, 0, 0, 'F'),
 (7, 1, 7, 0, 0, 0, 'F'),
-(8, 2, 1, 0, 0, 0, 'F'),
+(8, 2, 1, 6, 3, 9, 'F'),
 (9, 2, 2, 0, 0, 0, 'F'),
 (10, 2, 3, 0, 0, 0, 'F'),
 (11, 2, 4, 0, 0, 0, 'F'),
 (12, 2, 5, 0, 0, 0, 'F'),
 (13, 2, 6, 0, 0, 0, 'F'),
 (14, 2, 7, 0, 0, 0, 'F'),
-(15, 3, 1, 0, 0, 0, 'F'),
+(15, 3, 1, 44, 43, 87, 'B+'),
 (17, 3, 2, 0, 0, 0, 'F'),
 (18, 3, 3, 0, 0, 0, 'F'),
 (19, 3, 4, 0, 0, 0, 'F'),
@@ -183,7 +183,8 @@ INSERT INTO `students` (`id`, `reg_num`, `fname`, `lname`, `class_id`, `gender`,
 (5, 3, 'george', 'fredrik', 1, 'male', '2022-05-27', 'yoweri', 'monica', '0778965432', 'kabarole'),
 (6, 4, 'henry', 'larson', 2, 'male', '2022-05-07', 'bob', 'alice', '0709786542', 'mpigi'),
 (7, 5, 'alexander', 'mary', 2, 'female', '2022-05-13', 'quinton', 'sandra', '0706759842', 'kampala'),
-(8, 6, 'martha', 'catharine', 1, 'male', '2018-01-31', '6', 'elizabeth', '07068867666', 'kampala');
+(8, 6, 'martha', 'catharine', 1, 'male', '2018-01-31', '6', 'elizabeth', '07068867666', 'kampala'),
+(9, 0, 'veckna', 'gtt', 0, '', '0000-00-00', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -281,7 +282,7 @@ ALTER TABLE `staff`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `subjects`

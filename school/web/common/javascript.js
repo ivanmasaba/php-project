@@ -29,9 +29,6 @@ catch (e)
 return xmlHttp;
 }
 
-// Keep checking in the server for new messages
-//For those pages where unread messages are shown.
-setInterval(checkMsg, 3000);
 /*
 function checkMsg()
 {

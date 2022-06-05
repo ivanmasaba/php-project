@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js" ></script>
+</head>
+<body>
+    
+
+    <div id="firstname"></div>
+
+    <table class="table" >
+        <thead><th>NAME</th></thead>
+        <tbody> </tbody>
+    </table>
+
+    <p></p>
+
+    <button id="btn" >Get students</button>
+
+    <script >
+         btn.addEventListener('click', function(e){
+             loadStudents( './read_all.php', document.querySelector("table") );
+            alert("you click a button");
+        });
+    </script>
+
+<!-- 
+    <script>
+        const name = document.getElementById("firstname");
+        const btn = document.getElementById("btn");
+
+
+        const getStudents = function(){
+         const user = "read_all.php";
+
+        fetch(user)
+        .then( function(response){
+            console.log('woww it works', response);
+            return response.json();
+        } )
+        .then( function( data ){
+           // console.log( data );
+           for( let { fname, lname, class_name } of data ){
+               console.log( fname, lname, class_name );
+               const f = document.createElement('p');
+                f.innerText = fname + "   " + lname  + "   " +  class_name;
+                name.append(f);
+           }
+        })
+        .catch( function(err){
+            console.warn('something went wrong..', err);
+        } )
+        }//end function
+
+        
+
+        btn.addEventListener('click', function(e){
+            getStudents();
+            alert("you click a button");
+        });
+
+    </script> -->
+</body>
+</html>

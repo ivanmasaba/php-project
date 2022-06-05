@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API Post request</title>
+    
+    <script src="em.js" ></script>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>test</th><th>exam</th><th>total</th>
+        </thead>
+        <tbody>
+            <tr id="ass">
+                <td><input type="text" value="0" size="2" disabled></td>
+                <td><input type="text" value="0" size="2" disabled></td>
+                <td><input type="text" value="0" size="2" disabled></td>
+                <td> <button type="submit" onclick="edit();">edit marks</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p></p>
+    <p></p>
+
+    <form id="myform">
+        <input type="text" name="fname" placeholder="first name">
+        <input type="password" name="password" placeholder="password">
+        <button type="submit" >add student</button>
+        <!-- <input type="submit" value="add student"> -->
+    </form>
+
+    <div id="res" ></div>
+
+    <script>
+        const form = document.getElementById("myform");
+
+        form.addEventListener('submit', function(e){
+            //prevent auto submission
+            e.preventDefault();
+
+
+            const formData  = new FormData(this);
+
+            fetch( 'l.php', {
+                method: 'post',
+                body: formData
+            } ).then( function( response ){
+                return response.text();
+            } ).then( function( text ){
+                console.log( text );
+            } ).catch( function( error ){
+                console.error(error);
+            } )
+
+
+        })
+    </script>
+    
+</body>
+</html>

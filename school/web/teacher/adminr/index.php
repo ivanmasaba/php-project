@@ -111,6 +111,10 @@ echo "<h3 style=\"background-image: url../../images/icon-30-cpanel.png);\" ><a h
                       echo "<td>".$exam_score."</td>";
                       echo "<td>".$total_score."</td>";
                       echo "<td>".$grade."</td>";
+                      ?>
+          <td>  <a href="edit.php?&reg=<?php echo $reg_num;?>" >Edit</a>    <td>
+
+                      <?php
               
                 $bg++;
               }

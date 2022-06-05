@@ -111,7 +111,7 @@ public function run_query($sql){
         
 /************************************** */
          // update a password 
-         public function update(){
+         public function update(){ 
             //create query
             $query = 'UPDATE ' .$this->table.' 
                      SET
