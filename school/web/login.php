@@ -104,7 +104,18 @@
 					    $_SESSION['authenticated'] = 'yes';
 					header("location: ./teacher/"); 
 					exit;
-					}					
+					}else if($login->level == 'staff')
+					{	
+						$_SESSION['fname'] = $login->uname;
+
+						$_SESSION['index_number'] = $login->reg_num;
+						
+						$_SESSION['access_level'] = $login->level;
+						
+						$_SESSION['authenticated'] = 'yes';
+						header("location: ./admin/teachers/"); 
+					   exit;
+					}
 					
 				}else{
 					$msg = 'Incorrect password for ' . $login->uname;

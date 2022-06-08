@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2022 at 06:40 PM
+-- Generation Time: Jun 08, 2022 at 07:48 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -67,7 +67,10 @@ INSERT INTO `login` (`id`, `reg_num`, `uname`, `password`, `level`) VALUES
 (4, 4, 'henry', '1', 'student'),
 (5, 5, 'alexander', '1', 'student'),
 (6, 6, 'martha', '1', 'student'),
-(7, 7, 'mathew', '2', 'teacher');
+(7, 7, 'mathew', '2', 'teacher'),
+(8, 8, 'jesus', '1', 'staff'),
+(10, 9, 'grifin', '1', 'teacher'),
+(14, 10, 'franklin', 'wpfibf', 'student');
 
 -- --------------------------------------------------------
 
@@ -124,7 +127,14 @@ INSERT INTO `marks` (`id`, `reg_num`, `subj_id`, `test_score`, `exam_score`, `to
 (33, 5, 4, 0, 0, 0, 'F'),
 (34, 5, 5, 0, 0, 0, 'F'),
 (35, 5, 6, 0, 0, 0, 'F'),
-(36, 5, 7, 0, 0, 0, 'F');
+(36, 5, 7, 0, 0, 0, 'F'),
+(4332, 10, 1, 0, 0, 0, 'F'),
+(4333, 10, 2, 0, 0, 0, 'F'),
+(4334, 10, 3, 0, 0, 0, 'F'),
+(4335, 10, 4, 0, 0, 0, 'F'),
+(4336, 10, 5, 0, 0, 0, 'F'),
+(4337, 10, 6, 0, 0, 0, 'F'),
+(4338, 10, 7, 0, 0, 0, 'F');
 
 -- --------------------------------------------------------
 
@@ -183,8 +193,7 @@ INSERT INTO `students` (`id`, `reg_num`, `fname`, `lname`, `class_id`, `gender`,
 (5, 3, 'george', 'fredrik', 1, 'male', '2022-05-27', 'yoweri', 'monica', '0778965432', 'kabarole'),
 (6, 4, 'henry', 'larson', 2, 'male', '2022-05-07', 'bob', 'alice', '0709786542', 'mpigi'),
 (7, 5, 'alexander', 'mary', 2, 'female', '2022-05-13', 'quinton', 'sandra', '0706759842', 'kampala'),
-(8, 6, 'martha', 'catharine', 1, 'male', '2018-01-31', '6', 'elizabeth', '07068867666', 'kampala'),
-(9, 0, 'veckna', 'gtt', 0, '', '0000-00-00', '', '', '', '');
+(8, 6, 'martha', 'catharine', 1, 'male', '2018-01-31', '6', 'elizabeth', '07068867666', 'kampala');
 
 -- --------------------------------------------------------
 
@@ -208,7 +217,10 @@ INSERT INTO `subjects` (`id`, `subj_name`) VALUES
 (4, 'biology'),
 (5, 'physics'),
 (6, 'history'),
-(7, 'geography');
+(7, 'geography'),
+(14, ''),
+(15, ''),
+(16, '');
 
 --
 -- Indexes for dumped tables
@@ -264,13 +276,13 @@ ALTER TABLE `class`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `marks`
 --
 ALTER TABLE `marks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4339;
 
 --
 -- AUTO_INCREMENT for table `staff`
@@ -288,7 +300,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `subjects`
 --
 ALTER TABLE `subjects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -189,13 +189,10 @@ echo  "</tr>";
     
 </div>
 </div>
-<div class='btm'>
-    <a href='../index.php'>Home </a>
-    <a href='../adminreg/'> Registration </a>
-    <a href='../advres/'> View results </a>
-    <br/>&copy; All rights reserved. <br/> 
-    An Ivan Masaba Production 2022
-</div>
+
+<?php include( '../../common/footer.php' );?>
+
+
 <script type="text/javascript">
 <!--
 var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});

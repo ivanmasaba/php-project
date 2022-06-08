@@ -135,11 +135,11 @@ echo "<h3 style=\"background-image: url../../images/icon-30-cpanel.png);\" ><a h
 </div>
 </div>
 <div class='btm'>
-    <a href='../index1.php'>Home </a>
-    <a href='../registration'> Registration </a>
-    <a href='../results'> View results </a>
-    <br/>&copy; All rights reserved. <br/> 
-    An Ivan Masaba Production 2022
+    <a href='../'>Home </a>
+    <a href='#'> Add Results </a>
+    <a href='../advres/'> View results </a>
+    <a href="../options/"> Change your settings</a>
+    <br/>&copy; All rights reserved. <br/> An Ivan Masaba Production 2022
 </div>
 <script type="text/javascript">
 <!--

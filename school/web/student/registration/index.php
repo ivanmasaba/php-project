@@ -1,7 +1,7 @@
 <?php 
 	session_start();
 	if( $_SESSION['authenticated'] != 'yes' )
-	{header("location: ../login.php");}
+	{header("location: ../../login.php");}
 
 	
 	// initialize the app

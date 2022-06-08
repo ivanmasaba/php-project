@@ -31,7 +31,7 @@
 <div class="bar">
 <div id="current_time" style="color: #49AF3A; text-align:right; margin-bottom: 10px;"><?php echo date("l, d.M H:i", time()); ?></div>
 <div style="float: right;">
-    <a href="#" style="background: url(images/frontpage.gif) no-repeat; padding-left: 22px;">Home</a>&nbsp;&nbsp;
+    <a href="#" style="background: url(../images/frontpage.gif) no-repeat; padding-left: 22px;">Home</a>&nbsp;&nbsp;
     <a href="../sign out.php" style="background: url(../images/b_drop.png) no-repeat; padding-left: 18px;">Sign out</a>
 </div>
 <div id="greeting" style=" float: left;">Welcome, <?php echo "<b>" . $second_name . "</b>"; ?></div>
@@ -163,6 +163,7 @@
     </div>    
     </div>
 </div>
+
 <div class='btm'>
     <a href='#'>Home </a>
     <a href='adminr/'> Add Results </a>
@@ -170,5 +171,6 @@
     <a href="options/"> Change your settings</a>
     <br/>&copy; All rights reserved. <br/> An Ivan Masaba Production 2022
 </div>
+
 </body>
 </html>
